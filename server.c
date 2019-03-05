@@ -1,62 +1,36 @@
 /* Roll no. : R6-06
    Author : Aditya Suresh
-   EXPERIMENT 6-To perform IPC using Shared Memory for server. 
+   EXPERIMENT 6-To perform IPC using Shared Memory. Server evaluates expression received by Client.
 */
 
 #include<stdio.h>
-#include<sys/shm.h>
+#include<unistd.h>
 #include<string.h>
+#include<sys/ipc.h>
+#include<sys/shm.h>
 
-int main()
+main()
 	{
-	 int shmid,addr,i,j,result;
-	 int num[5];
-         char str2[10]=" ";
-         //randomize();
-	 key_t key,new_key;
- 	 key=100;
-	 j=0;
-
-	 shmid=shmget(key,100,IPC_CREAT|0666);
-	 addr=shmat(shmid,NULL,0);
-
-	 sscanf(addr,"%s",str2);
-	 shmdt(addr);
-
-	//printf(str2);
-	
-	 for(i=0;i<strlen(str2)-1;i++)
+	 int shmid,l,i,result=0;
+	 char str[20];
+	 void *addr=NULL;
+	 shmid=shmget(97,100,IPC_CREAT|0666);		//Create shared memory
+	 addr=shmat(shmid,NULL,0);			//Attach shared memory to program address space
+	 sscanf(addr,"%s",str);				//Read from shared memory
+	 l=strlen(str);
+	 for(i=0;i<l;i++)				//For evaluating the expression
 	 	{
-		 switch(str2[i])
-			{
-			 case '0': num[j++]=0;
-				   break;
-			 case '1': num[j++]=1;
-				   break;
-			 case '2': num[j++]=2;
-				   break;
-			 case '3': num[j++]=3;
-				   break;
-			 case '4': num[j++]=4;
-				   break;
-			 case '5': num[j++]=5;
-				   break;
-			 case '6': num[j++]=6;
-				   break;
-			 case '7': num[j++]=7;
-				   break;
-			 case '8': num[j++]=8;
-				   break;
-			 case '9': num[j++]=9;
-				   break;
-			}
-		 if( str2[i]=='+')
-	 		result=num[1]+num[2];
-
+		 if(isdigit(str[i]))
+		 	result=result+str[i]-48;	//If it is a digit,add it and for ASCII adjustment, subtract 48
 		}
-
-	         printf("Result: %d",result);
-
-	 return 0;
-
+	 printf("\nServer\n\nResult = %d\n",result);
+	 shmdt(addr);
 	}
+
+/*
+OUTPUT
+
+Server
+
+Result = 9
+*/

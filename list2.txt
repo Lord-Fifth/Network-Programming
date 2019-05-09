@@ -1,0 +1,35 @@
+total 136
+drwxrwxr-x  3 r6 r6 4096 May  9 11:54 .
+drwxr-x--- 22 r6 r6 4096 May  9 10:54 ..
+-rwxrwxr-x  1 r6 r6 8168 May  8 16:03 a.out
+-rw-rw-r--  1 r6 r6 1241 Feb 28 12:07 child.c
+-rw-rw-r--  1 r6 r6  611 Mar  5 15:17 client.c
+-rwxrwxr-x  1 r6 r6 7906 May  9 11:54 client.out
+-rw-rw-r--  1 r6 r6 1039 May  8 16:24 client_time.c
+-rw-rw-r--  1 r6 r6 1803 Feb 28 12:12 dualpipe.c
+-rw-rw-r--  1 r6 r6 7483 May  8 16:18 ftpc.c
+-rw-rw-r--  1 r6 r6 2463 May  8 16:18 ftps.c
+drwxrwxr-x  7 r6 r6 4096 May  9 11:45 .git
+-rwx------  1 r6 r6    0 May  9 11:54 list2.txt
+-rw-rw-r--  1 r6 r6    0 May  9 11:54 list.txt
+-rw-rw-r--  1 r6 r6 1999 Feb 28 11:46 matrix.c
+-rw-rw-r--  1 r6 r6 1354 Apr 27 16:18 multiclient.c
+-rw-rw-r--  1 r6 r6 1464 Apr 27 16:18 multiserver.c
+-rw-rw-r--  1 r6 r6 2435 May  8 16:27 multiuser_client.c
+-rw-rw-r--  1 r6 r6 4006 May  8 16:27 multiuser_server.c
+-rw-rw-r--  1 r6 r6 1422 Apr  2 15:09 reader.c
+-rwxrwxr-x  1 r6 r6 7883 Apr  9 15:46 server
+-rw-rw-r--  1 r6 r6  807 Mar  5 15:18 server.c
+-rwxrwxr-x  1 r6 r6 8023 May  9 11:54 server.out
+-rw-rw-r--  1 r6 r6 1393 May  8 16:09 server_time.c
+-rw-rw-r--  1 r6 r6 1265 Feb 28 12:20 singlepipe.c
+-rw-rw-r--  1 r6 r6 1953 May  8 16:22 SMTPC.c
+-rw-rw-r--  1 r6 r6 2654 May  8 16:23 SMTPS.c
+-rw-rw-r--  1 r6 r6 1238 Apr  2 15:29 tcp_client.c
+-rw-rw-r--  1 r6 r6 1340 Apr  2 15:29 tcp_server.c
+-rw-rw-r--  1 r6 r6  998 Apr  2 15:53 udp_client.c
+-rw-rw-r--  1 r6 r6 1179 Apr  2 15:53 udp_server.c
+-rw-rw-r--  1 r6 r6 1116 Apr  2 15:09 writer.c
+c
+-rw-rw-r--  1 r6 r6 1179 Apr  2 15:53 udp_server.c
+-rw-rw-r--  1 r6 r6 1116 Apr  2 15:09 writ
